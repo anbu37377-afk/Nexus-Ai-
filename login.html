@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login — AURORA NEXUS AI LAB</title>
+  <meta name="description" content="Login to Aurora Nexus AI Lab dashboard."/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Go to home">
+      <div class="brand-badge" aria-hidden="true"></div>
+      <div>
+        <h1>AURORA NEXUS AI LAB</h1>
+        <p>Secure Access</p>
+      </div>
+    </a>
+
+    <div class="nav-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle theme">☾</button>
+      <a class="primary-btn" href="index.html">Back to Website</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="auth-wrap">
+    <div class="container">
+
+      <!-- ✅ Single premium card (NO left image) -->
+      <div class="auth-card reveal auth-card--single">
+
+        <div class="auth-form auth-form--single">
+
+          <!-- ✅ Top row exactly like reference format -->
+          <div class="auth-top auth-top--brand">
+            <a href="index.html" class="brand brand--inline" aria-label="Go to home">
+              <div class="brand-badge" aria-hidden="true"></div>
+              <div>
+                <h1 style="margin:0;">AURORA NEXUS AI LAB</h1>
+                <p style="margin:2px 0 0;">Trusted research operations</p>
+              </div>
+            </a>
+
+            <a href="index.html" aria-label="Back to website">Back to Website</a>
+          </div>
+
+          <h2>Login to your account</h2>
+          <p>Access the dashboard, view evaluation metrics, and manage lab operations.</p>
+
+          <form class="form" data-login-form>
+            <div class="field">
+              <label for="li_email">Business Email</label>
+              <input id="li_email" type="email" placeholder="you@company.com" required>
+            </div>
+
+            <div class="field">
+              <label for="li_password">Password</label>
+              <input id="li_password" type="password" placeholder="Your password" required>
+            </div>
+
+            <div class="row">
+              <label class="checkbox">
+                <input type="checkbox">
+                Remember me
+              </label>
+              <a class="ghost-link" href="contact.html">Forgot password?</a>
+            </div>
+
+            <button class="primary-btn" type="submit" style="width:100%; margin-top:12px;">
+              Login to Dashboard
+            </button>
+
+            <p class="meta" style="margin-top:10px;">
+              Demo authentication uses LocalStorage (no backend). You can integrate Firebase/Auth0 later.
+            </p>
+
+            <div class="divider">OR</div>
+
+            <button type="button" class="social-btn" onclick="location.href='contact.html'">
+              <span class="social-icon">G</span>
+              Continue with Google
+            </button>
+
+            <button type="button" class="social-btn" style="margin-top:10px" onclick="location.href='contact.html'">
+              <span class="social-icon">f</span>
+              Continue with Facebook
+            </button>
+
+            <div class="auth-footer">
+              New to Aurora Nexus? <a href="signup.html">Create an account</a>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div class="toast" role="status" aria-live="polite">
+  <strong>Notification</strong>
+  <span>Message</span>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

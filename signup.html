@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up — AURORA NEXUS AI LAB</title>
+  <meta name="description" content="Create an account for Aurora Nexus AI Lab dashboard."/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Go to home">
+      <div class="brand-badge" aria-hidden="true"></div>
+      <div>
+        <h1>AURORA NEXUS AI LAB</h1>
+        <p>Create Account</p>
+      </div>
+    </a>
+
+    <div class="nav-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle theme">☾</button>
+      <a class="primary-btn" href="index.html">Back to Website</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="auth-wrap">
+    <div class="container">
+
+      <!-- ✅ Single premium card (NO left image) -->
+      <div class="auth-card reveal auth-card--single">
+
+        <div class="auth-form auth-form--single">
+
+          <!-- ✅ Top row like login format -->
+          <div class="auth-top auth-top--brand">
+            <a href="index.html" class="brand brand--inline" aria-label="Go to home">
+              <div class="brand-badge" aria-hidden="true"></div>
+              <div>
+                <h1 style="margin:0;">AURORA NEXUS AI LAB</h1>
+                <p style="margin:2px 0 0;">Join the research operation</p>
+              </div>
+            </a>
+
+            <a href="index.html" aria-label="Back to website">Back to Website</a>
+          </div>
+
+          <h2>Create your account</h2>
+          <p>Sign up to access lab dashboards and premium research modules.</p>
+
+          <form class="form" data-signup-form>
+            <div class="field">
+              <label for="su_name">Full Name</label>
+              <input id="su_name" type="text" placeholder="Your full name" required>
+            </div>
+
+            <div class="field">
+              <label for="su_email">Business Email</label>
+              <input id="su_email" type="email" placeholder="you@company.com" required>
+            </div>
+
+            <div class="field">
+              <label for="su_password">Password</label>
+              <input id="su_password" type="password" placeholder="Min 6 characters" required>
+            </div>
+
+            <button class="primary-btn" type="submit" style="width:100%; margin-top:12px;">
+              Create Account
+            </button>
+
+            <div class="divider">OR</div>
+
+            <button type="button" class="social-btn" onclick="location.href='contact.html'">
+              <span class="social-icon">G</span>
+              Sign up with Google
+            </button>
+
+            <button type="button" class="social-btn" style="margin-top:10px" onclick="location.href='contact.html'">
+              <span class="social-icon">f</span>
+              Sign up with Facebook
+            </button>
+
+            <div class="auth-footer">
+              Already have an account? <a href="login.html">Login</a>
+            </div>
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div class="toast" role="status" aria-live="polite">
+  <strong>Notification</strong>
+  <span>Message</span>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

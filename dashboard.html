@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard — AURORA NEXUS AI LAB</title>
+  <meta name="description" content="AI Research Dashboard for Aurora Nexus AI Lab."/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Go to home">
+      <div class="brand-badge" aria-hidden="true"></div>
+      <div>
+        <h1>AURORA NEXUS AI LAB</h1>
+        <p>Research • Safety • Deployment Excellence</p>
+      </div>
+    </a>
+
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a class="nav-link" data-nav href="index.html">Home 1</a></li>
+        <li><a class="nav-link" data-nav href="home-2.html">Home 2</a></li>
+        <li><a class="nav-link" data-nav href="dashboard.html">Dashboard</a></li>
+        <li><a class="nav-link" data-nav href="services.html">Services</a></li>
+        <li><a class="nav-link" data-nav href="publications.html">Publications</a></li>
+        <li><a class="nav-link" data-nav href="team.html">Team</a></li>
+        <li><a class="nav-link" data-nav href="blog.html">Blog</a></li>
+        <li><a class="nav-link" data-nav href="contact.html">Contact</a></li>
+        <li><a class="nav-link" data-nav href="login.html">Login</a></li>
+        <li><a class="nav-link" data-nav href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle light/dark theme">☾</button>
+      <button class="icon-btn hamburger" data-open-drawer aria-label="Open mobile menu">☰</button>
+      <a class="primary-btn" href="contact.html">Partner With Us</a>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Drawer -->
+<div class="mobile-drawer" aria-hidden="true">
+  <div class="drawer-backdrop" data-backdrop></div>
+  <div class="drawer-panel" role="dialog" aria-label="Mobile menu">
+    <div class="drawer-head">
+      <div class="brand">
+        <div class="brand-badge" aria-hidden="true"></div>
+        <div>
+          <h1>AURORA NEXUS AI LAB</h1>
+          <p>AI Research Lab</p>
+        </div>
+      </div>
+      <button class="icon-btn" data-close-drawer aria-label="Close mobile menu">✕</button>
+    </div>
+
+    <div class="drawer-links">
+      <a href="index.html">Home 1</a>
+      <a href="home-2.html">Home 2</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="services.html">Services</a>
+      <a href="publications.html">Publications</a>
+      <a href="team.html">Team</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Login</a>
+      <a href="signup.html">Sign Up</a>
+
+      <button class="primary-btn" style="width:100%" data-theme-toggle aria-label="Toggle theme">
+        Toggle Theme
+      </button>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container reveal">
+      <h2>Research Dashboard</h2>
+      <p>
+        Real-time operational visibility: safety pipelines, evaluation metrics, compute utilization, and delivery reporting.
+        This dashboard layout is designed for premium enterprise presentation.
+      </p>
+
+      <div class="actions-row" style="margin-top:16px;">
+        <a class="primary-btn" href="publications.html" style="height:44px; display:inline-flex; align-items:center;">Open Research Library</a>
+        <a class="secondary-btn" href="services.html" style="height:44px; display:inline-flex; align-items:center;">Request Optimization</a>
+        <a class="link-btn" href="#ops">
+          Jump to Ops <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- KPI CARDS -->
+  <section class="section" id="ops">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <h3>Executive Metrics</h3>
+          <p>At-a-glance performance signals built for reporting, governance, and leadership updates.</p>
+        </div>
+        <span class="badge">Live telemetry</span>
+      </div>
+
+      <div class="grid-3">
+        <div class="card reveal">
+          <span class="badge">Live</span>
+          <h4>System Status</h4>
+          <p class="meta">Inference API: <strong style="color:var(--accent)">Operational</strong></p>
+          <p class="meta">Safety Pipeline: <strong style="color:var(--accent)">Stable</strong></p>
+          <p class="meta">Eval Queue: <strong>14 running</strong> • <strong>6 pending</strong></p>
+          <div class="actions-row">
+            <a class="small-btn" href="services.html">Optimize system</a>
+            <a class="small-btn" href="contact.html">Report issue</a>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <span class="badge">Metrics</span>
+          <h4>Safety & Quality</h4>
+          <p class="meta">Average Safety Score: <strong>96%</strong></p>
+          <p class="meta">Toxicity Incidents: <strong>0</strong></p>
+          <p class="meta">Drift Alerts: <strong>2</strong> • <strong>Actioned: 1</strong></p>
+          <div class="actions-row">
+            <a class="small-btn" href="publications.html">Methodology</a>
+            <a class="small-btn" href="contact.html">Audit request</a>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <span class="badge">Output</span>
+          <h4>Research Velocity</h4>
+          <p class="meta">Experiments / Month: <strong>42+</strong></p>
+          <p class="meta">Active Projects: <strong>9</strong></p>
+          <p class="meta">Published Papers: <strong>18</strong> • <strong>In review: 4</strong></p>
+          <div class="actions-row">
+            <a class="small-btn" href="team.html">Assign team</a>
+            <a class="small-btn" href="publications.html">See papers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECOND ROW INSIGHTS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <h3>Compute & Deployment Intelligence</h3>
+          <p>Operational detail modules: uptime, cost-efficiency, throughput, and service delivery readiness.</p>
+        </div>
+        <a class="link-btn" href="services.html">View services <span class="arrow">→</span></a>
+      </div>
+
+      <div class="grid-3">
+        <div class="card reveal">
+          <span class="badge">Compute</span>
+          <h4>GPU Cluster Utilization</h4>
+          <p class="meta">Avg GPU Load: <strong>71%</strong></p>
+          <p class="meta">Peak Utilization: <strong>93%</strong></p>
+          <p class="meta">Idle Optimization: <strong>Enabled</strong></p>
+          <div class="actions-row">
+            <a class="small-btn" href="services.html">Reduce cost</a>
+            <a class="small-btn" href="contact.html">Capacity plan</a>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <span class="badge">Latency</span>
+          <h4>Inference Performance</h4>
+          <p class="meta">P95 Latency: <strong>410ms</strong></p>
+          <p class="meta">Cache Hit Rate: <strong>64%</strong></p>
+          <p class="meta">Routing: <strong>Adaptive</strong></p>
+          <div class="actions-row">
+            <a class="small-btn" href="services.html">Speedup plan</a>
+            <a class="small-btn" href="publications.html">Research proof</a>
+          </div>
+        </div>
+
+        <div class="card reveal">
+          <span class="badge">Governance</span>
+          <h4>Compliance Snapshot</h4>
+          <p class="meta">Security Policies: <strong>Pass</strong></p>
+          <p class="meta">Privacy Controls: <strong>Enabled</strong></p>
+          <p class="meta">Logging & Audit: <strong>Complete</strong></p>
+          <div class="actions-row">
+            <a class="small-btn" href="contact.html">Compliance report</a>
+            <a class="small-btn" href="blog.html">Best practices</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT ACTIVITY LIST -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <h3>Recent Lab Activity</h3>
+          <p>Premium timeline-style modules: experiments, model releases, evaluation cycles, and research reviews.</p>
+        </div>
+        <span class="badge">Last 7 days</span>
+      </div>
+
+      <div class="list">
+        <div class="list-item reveal">
+          <div class="pill">Today</div>
+          <div>
+            <h4>Evaluation Run Completed — “Guarded Reasoning v2”</h4>
+            <div class="meta">Result: safety uplift +2.8% • latency change +0.4% • risk score reduced.</div>
+            <div class="actions-row">
+              <a class="small-btn" href="publications.html">View report</a>
+              <a class="small-btn" href="contact.html">Share with client</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="list-item reveal">
+          <div class="pill">2 days</div>
+          <div>
+            <h4>Deployment — RAG Agent Stack for Regulated Data</h4>
+            <div class="meta">Private knowledge base • encrypted retrieval • governance controls enabled.</div>
+            <div class="actions-row">
+              <a class="small-btn" href="services.html">See system</a>
+              <a class="small-btn" href="team.html">Team notes</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="list-item reveal">
+          <div class="pill">5 days</div>
+          <div>
+            <h4>Research Review — inference optimization strategy approved</h4>
+            <div class="meta">Goal: cost -18% • latency -11% • reliability improvement across traffic spikes.</div>
+            <div class="actions-row">
+              <a class="small-btn" href="services.html">Optimization track</a>
+              <a class="small-btn" href="blog.html">Read insights</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PREMIUM IMAGE MODULES (AUTO ROTATE IMAGES) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <h3>Operational Snapshots</h3>
+          <p>High-end visuals for premium corporate presentation, updated automatically on refresh.</p>
+        </div>
+        <span class="badge">Auto-generated gallery</span>
+      </div>
+
+      <div class="blog-grid">
+        <article class="post reveal">
+          <img data-auto-img="infra" loading="lazy" alt="AI infrastructure snapshot">
+          <div class="post-body">
+            <span class="badge">Infrastructure</span>
+            <h4>Inference Cluster (GPU)</h4>
+            <p>Health checks, deployment pipelines, real-time performance monitoring for production-grade delivery.</p>
+            <div class="actions-row"><a class="small-btn" href="services.html">Improve efficiency</a></div>
+          </div>
+        </article>
+
+        <article class="post reveal">
+          <img data-auto-img="analytics" loading="lazy" alt="analytics dashboard snapshot">
+          <div class="post-body">
+            <span class="badge">Analytics</span>
+            <h4>Evaluation Analytics</h4>
+            <p>Robustness tests, bias evaluation, and safety constraint scoring designed to be audit-ready.</p>
+            <div class="actions-row"><a class="small-btn" href="publications.html">View evaluation</a></div>
+          </div>
+        </article>
+
+        <article class="post reveal">
+          <img data-auto-img="team" loading="lazy" alt="research operations snapshot">
+          <div class="post-body">
+            <span class="badge">Operations</span>
+            <h4>Weekly Research Review</h4>
+            <p>Roadmap planning, stakeholder reporting, and transparent iteration cycles across programs.</p>
+            <div class="actions-row"><a class="small-btn" href="team.html">View team</a></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- EXTRA IMAGE ROW -->
+      <div class="section" style="padding-top:26px">
+        <div class="grid-3">
+          <article class="card reveal" style="padding:0; overflow:hidden;">
+            <img data-auto-img="chips" loading="lazy" alt="AI chip lab" style="height:220px; width:100%; object-fit:cover;">
+            <div style="padding:14px;">
+              <span class="badge">Hardware</span>
+              <h4 style="margin:10px 0 6px;">Acceleration Layer</h4>
+              <p class="meta">GPU routing + quantization pipeline for premium throughput scaling.</p>
+            </div>
+          </article>
+
+          <article class="card reveal" style="padding:0; overflow:hidden;">
+            <img data-auto-img="security" loading="lazy" alt="AI security lab" style="height:220px; width:100%; object-fit:cover;">
+            <div style="padding:14px;">
+              <span class="badge">Security</span>
+              <h4 style="margin:10px 0 6px;">Secure Access & Logs</h4>
+              <p class="meta">Audit-ready controls and governance practices designed for enterprise trust.</p>
+            </div>
+          </article>
+
+          <article class="card reveal" style="padding:0; overflow:hidden;">
+            <img data-auto-img="vision" loading="lazy" alt="AI vision lab" style="height:220px; width:100%; object-fit:cover;">
+            <div style="padding:14px;">
+              <span class="badge">Applied AI</span>
+              <h4 style="margin:10px 0 6px;">Deployment Outcomes</h4>
+              <p class="meta">Trusted models delivered into systems with measurable performance & ROI.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="brand" style="margin-bottom:12px">
+          <div class="brand-badge" aria-hidden="true"></div>
+          <div>
+            <h1>AURORA NEXUS AI LAB</h1>
+            <p>Research Dashboard</p>
+          </div>
+        </div>
+        <p>Premium enterprise dashboard module for AI research operations, evaluation telemetry, and safety governance.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Links</h4>
+        <a href="index.html">Home</a><br/>
+        <a href="dashboard.html">Dashboard</a><br/>
+        <a href="publications.html">Publications</a><br/>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Operations</h4>
+        <a href="services.html">Optimization</a><br/>
+        <a href="services.html">Safety audits</a><br/>
+        <a href="team.html">Team tasks</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>research@auroranexus.ai<br/>Chennai • India</p>
+      </div>
+    </div>
+
+    <div class="bottom-footer">
+      <span>© <span id="year"></span> Aurora Nexus AI Lab.</span>
+      <button class="back-to-top" data-back-to-top>Back to top ↑</button>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" role="status" aria-live="polite">
+  <strong>Notification</strong>
+  <span>Message</span>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  /* ✅ Auto-generate premium dashboard images on refresh */
+  const imagePools = {
+    infra: [
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1600&q=80"
+    ],
+    analytics: [
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1600&q=80"
+    ],
+    team: [
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1600&q=80"
+    ],
+    chips: [
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=1600&q=80"
+    ],
+    security: [
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1600267165777-5d5698c5de77?auto=format&fit=crop&w=1600&q=80"
+    ],
+    vision: [
+      "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1600&q=80"
+    ]
+  };
+
+  function pickRandom(arr){
+    return arr[Math.floor(Math.random() * arr.length)];
+  }
+
+  document.querySelectorAll("img[data-auto-img]").forEach(img => {
+    const key = img.getAttribute("data-auto-img");
+    const pool = imagePools[key];
+    if(pool && pool.length){
+      img.src = pickRandom(pool);
+    }
+  });
+</script>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
