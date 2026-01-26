@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact — AURORA NEXUS AI LAB</title>
   <meta name="description" content="Contact Aurora Nexus AI Lab for collaborations, audits, and deployment partnerships."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
   <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
-<body>
+<body class="page-contact">
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header>
@@ -24,21 +28,34 @@
       <ul>
         <li><a class="nav-link" data-nav href="index.html">Home 1</a></li>
         <li><a class="nav-link" data-nav href="home-2.html">Home 2</a></li>
-        <li><a class="nav-link" data-nav href="dashboard.html">Dashboard</a></li>
         <li><a class="nav-link" data-nav href="services.html">Services</a></li>
         <li><a class="nav-link" data-nav href="publications.html">Publications</a></li>
         <li><a class="nav-link" data-nav href="team.html">Team</a></li>
         <li><a class="nav-link" data-nav href="blog.html">Blog</a></li>
         <li><a class="nav-link" data-nav href="contact.html">Contact</a></li>
-        <li><a class="nav-link" data-nav href="login.html">Login</a></li>
-        <li><a class="nav-link" data-nav href="signup.html">Sign Up</a></li>
+        <li class="nav-profile-menu">
+          <button class="nav-link nav-profile-trigger" type="button" aria-haspopup="true">Profile</button>
+          <ul class="nav-profile-list" aria-label="Profile">
+            <li><a class="nav-link" href="login.html">Login</a></li>
+            <li><a class="nav-link" href="signup.html">Sign Up</a></li>
+            <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
 
     <div class="nav-actions">
-      <button class="icon-btn" data-theme-toggle aria-label="Toggle light/dark theme">☾</button>
-      <button class="icon-btn hamburger" data-open-drawer aria-label="Open mobile menu">☰</button>
-      <a class="primary-btn" href="#form">Send Inquiry</a>
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle light/dark theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3.5v2.3M12 18.2v2.3M4.9 5.1l1.6 1.6M17.5 17.7l1.6 1.6M3.5 12h2.3M18.2 12h2.3M5.1 19.1l1.6-1.6M17.7 6.5l1.6-1.6"/>
+          <circle cx="12" cy="12" r="4.2"/>
+        </svg>
+      </button>
+      <button class="icon-btn hamburger" data-open-drawer aria-label="Open mobile menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.8" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
     </div>
   </div>
 </header>
@@ -61,18 +78,11 @@
     <div class="drawer-links">
       <a href="index.html">Home 1</a>
       <a href="home-2.html">Home 2</a>
-      <a href="dashboard.html">Dashboard</a>
       <a href="services.html">Services</a>
       <a href="publications.html">Publications</a>
       <a href="team.html">Team</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
-      <a href="login.html">Login</a>
-      <a href="signup.html">Sign Up</a>
-
-      <button class="primary-btn" style="width:100%" data-theme-toggle aria-label="Toggle theme">
-        Toggle Theme
-      </button>
     </div>
   </div>
 </div>
@@ -80,54 +90,18 @@
 <main id="main">
 
   <!-- HERO -->
-  <section class="page-hero">
+  <section class="page-hero center">
     <div class="container reveal">
       <h2>Contact</h2>
-      <p>
-        Premium collaboration experience. Reach out for audits, safety governance, optimization,
-        enterprise deployments, and research partnerships.
-      </p>
+      <p>Reach the lab for audits, research partnerships, and deployment support.</p>
 
-      <div class="actions-row" style="margin-top:16px;">
-        <a class="primary-btn" href="#form" style="height:44px; display:inline-flex; align-items:center;">
-          Send Message
-        </a>
-        <a class="secondary-btn" href="services.html" style="height:44px; display:inline-flex; align-items:center;">
-          View Services
-        </a>
-        <a class="link-btn" href="#social">
-          Social channels <span class="arrow">→</span>
-        </a>
-      </div>
-    </div>
-  </section>
 
-  <!-- TRUST BLOCKS -->
-  <section class="section">
-    <div class="container">
-      <div class="grid-3">
-        <div class="card reveal">
-          <span class="badge">Response Time</span>
-          <h4>Within 24 Hours</h4>
-          <p class="meta">We reply fast with clear next steps and a professional proposal workflow.</p>
-        </div>
-        <div class="card reveal">
-          <span class="badge">Security</span>
-          <h4>Confidential by Default</h4>
-          <p class="meta">All inquiries handled securely. NDA and audit-ready documentation supported.</p>
-        </div>
-        <div class="card reveal">
-          <span class="badge">Delivery</span>
-          <h4>Measurable Outcomes</h4>
-          <p class="meta">We define success metrics early and report results with clarity and proof.</p>
-        </div>
-      </div>
     </div>
   </section>
 
   <!-- FORM + CONTACT + IMAGE -->
   <section class="section" id="form">
-    <div class="container" style="display:grid; grid-template-columns: 1.1fr 0.9fr; gap: 14px;">
+    <div class="container contact-shell">
 
       <!-- FORM -->
       <form class="form reveal" data-contact-form>
@@ -143,170 +117,60 @@
 
         <div class="field">
           <label for="subject">Subject</label>
-          <input id="subject" name="subject" type="text" placeholder="Project / Research Collaboration" required />
+          <input id="subject" name="subject" type="text" placeholder="Project or research collaboration" required />
         </div>
 
         <div class="field">
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6" placeholder="Tell us your goal, constraints, timeline, and what success looks like..." required></textarea>
+          <textarea id="message" name="message" rows="6" placeholder="Tell us your goal, constraints, timeline, and success criteria." required></textarea>
         </div>
 
         <button class="primary-btn" type="submit">Send Message</button>
         <p class="meta">We typically respond within 24 hours. Your info is handled confidentially.</p>
       </form>
 
-      <!-- RIGHT SIDE -->
-      <div class="card reveal">
-        <span class="badge">Direct Contacts</span>
-        <h4>Research & Enterprise Partnerships</h4>
-        <p class="meta">
-          For grants, joint research, pilot deployments, audits, or production delivery programs.
-        </p>
+      <div class="contact-panel reveal">
+        <span class="badge">Direct Line</span>
+        <h4>Research & Partnerships</h4>
+        <p class="meta">For grants, joint research, pilots, audits, or deployment programs.</p>
 
-        <!-- Auto Image -->
-        <div style="margin-top:12px; border-radius: 18px; overflow:hidden; border: 1px solid var(--border);">
-          <img data-auto-img="contactAi" loading="lazy" alt="AI research visual" style="height:220px; width:100%; object-fit:cover;">
-        </div>
-
-        <div class="list" style="margin-top:12px;">
-          <div class="list-item">
-            <div class="pill">Email</div>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 6h20v12H2z"/>
+                <path d="M2 6l10 7 10-7"/>
+              </svg>
+            </div>
             <div>
-              <h4>research@auroranexus.ai</h4>
-              <div class="meta">Best for proposals, partnerships, and formal communication.</div>
+              <h4>Email</h4>
+              <div class="meta">research@auroranexus.ai</div>
             </div>
           </div>
 
-          <div class="list-item">
-            <div class="pill">Phone</div>
+          <div class="contact-item">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h6l1 5-3 2a13 13 0 0 0 6 6l2-3 5 1v6a2 2 0 0 1-2 2c-8.8-.5-15.5-7.2-16-16a2 2 0 0 1 2-2z"/>
+              </svg>
+            </div>
             <div>
-              <h4>+91 90000 00000</h4>
-              <div class="meta">For urgent enterprise coordination and workshop scheduling.</div>
+              <h4>Phone</h4>
+              <div class="meta">+91 90000 00000</div>
             </div>
           </div>
 
-          <div class="list-item">
-            <div class="pill">Office</div>
-            <div>
-              <h4>Chennai, India</h4>
-              <div class="meta">Available for high-stakes workshops and secure onboarding.</div>
+          <div class="contact-item">
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3a7 7 0 0 1 7 7c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 7-7z"/>
+                <circle cx="12" cy="10" r="2.5"/>
+              </svg>
             </div>
-          </div>
-        </div>
-
-        <div class="actions-row" style="margin-top:12px;">
-          <a class="small-btn" href="services.html">Service Scope</a>
-          <a class="small-btn" href="team.html">Meet Team</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SOCIAL MEDIA -->
-  <section class="section" id="social">
-    <div class="container">
-      <div class="section-head reveal">
-        <div>
-          <h3>Follow Our Work</h3>
-          <p>Research updates, safety insights, engineering experiments, and publication releases.</p>
-        </div>
-        <span class="badge">Social presence</span>
-      </div>
-
-      <div class="grid-3">
-        <a class="card reveal" href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="Aurora Nexus on LinkedIn">
-          <span class="badge">LinkedIn</span>
-          <h4 style="margin-top:10px;">Enterprise Updates</h4>
-          <p class="meta">Partnership announcements, case insights, and corporate publications.</p>
-          <div class="social" style="margin-top:12px;">
-            <span class="icon-btn" aria-hidden="true">in</span>
-          </div>
-        </a>
-
-        <a class="card reveal" href="https://github.com" target="_blank" rel="noopener" aria-label="Aurora Nexus on GitHub">
-          <span class="badge">GitHub</span>
-          <h4 style="margin-top:10px;">Research Engineering</h4>
-          <p class="meta">Reproducible experiments, evaluation scripts, and open-source tools.</p>
-          <div class="social" style="margin-top:12px;">
-            <span class="icon-btn" aria-hidden="true">⌁</span>
-          </div>
-        </a>
-
-        <a class="card reveal" href="https://x.com" target="_blank" rel="noopener" aria-label="Aurora Nexus on Twitter/X">
-          <span class="badge">X / Twitter</span>
-          <h4 style="margin-top:10px;">Live Research Notes</h4>
-          <p class="meta">New paper drops, lab thoughts, and AI safety updates.</p>
-          <div class="social" style="margin-top:12px;">
-            <span class="icon-btn" aria-hidden="true">𝕏</span>
-          </div>
-        </a>
-      </div>
-
-      <div class="grid-3" style="margin-top:14px;">
-        <a class="card reveal" href="https://youtube.com" target="_blank" rel="noopener" aria-label="Aurora Nexus on YouTube">
-          <span class="badge">YouTube</span>
-          <h4 style="margin-top:10px;">Lab Demos</h4>
-          <p class="meta">Product demos, research explainers, and enterprise engineering walkthroughs.</p>
-          <div class="social" style="margin-top:12px;">
-            <span class="icon-btn" aria-hidden="true">▶</span>
-          </div>
-        </a>
-
-        <a class="card reveal" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Aurora Nexus on Instagram">
-          <span class="badge">Instagram</span>
-          <h4 style="margin-top:10px;">Behind the Scenes</h4>
-          <p class="meta">Team culture, workshops, and research studio activity visuals.</p>
-          <div class="social" style="margin-top:12px;">
-            <span class="icon-btn" aria-hidden="true">◎</span>
-          </div>
-        </a>
-
-        <a class="card reveal" href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Aurora Nexus on Facebook">
-          <span class="badge">Facebook</span>
-          <h4 style="margin-top:10px;">Community</h4>
-          <p class="meta">Community posts, announcements, and research event updates.</p>
-          <div class="social" style="margin-top:12px;">
-            <span class="icon-btn" aria-hidden="true">f</span>
-          </div>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head reveal">
-        <div>
-          <h3>Quick FAQ</h3>
-          <p>Answers to common questions from enterprise teams and research partners.</p>
-        </div>
-        <span class="badge">Support</span>
-      </div>
-
-      <div class="list">
-        <div class="list-item reveal">
-          <div class="pill">Q</div>
-          <div>
-            <h4>Do you support NDA for enterprise discussions?</h4>
-            <div class="meta">Yes. We support NDA-first engagements and secure information handling policies.</div>
-          </div>
-        </div>
-
-        <div class="list-item reveal">
-          <div class="pill">Q</div>
-          <div>
-            <h4>Can you deploy Private AI systems on-premise?</h4>
-            <div class="meta">Yes. We build secure private RAG and inference stacks on cloud or on-premise environments.</div>
-          </div>
-        </div>
-
-        <div class="list-item reveal">
-          <div class="pill">Q</div>
-          <div>
-            <h4>What do we receive after a safety audit?</h4>
-            <div class="meta">A complete audit report, risk analysis, vulnerability coverage, and mitigation roadmap.</div>
+            <div>
+              <h4>Office</h4>
+              <div class="meta">Chennai, India</div>
+            </div>
           </div>
         </div>
       </div>
@@ -327,6 +191,23 @@
           </div>
         </div>
         <p>Luxury UI, premium UX, enterprise credibility — all in minimal HTML/CSS/JS.</p>
+        <div class="social footer-social">
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.5 8.5h-3v10h3v-10zm-1.5-4a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zm5.5 4h-2.8v10h2.8v-5.2c0-1.4.5-2.3 1.8-2.3 1 0 1.6.7 1.9 1.4.1.2.1.6.1.9v5.2h2.8v-5.6c0-3-1.6-4.4-3.7-4.4-1.7 0-2.5 1-2.9 1.6v-1.3z"/>
+            </svg>
+          </a>
+          <a href="https://x.com" target="_blank" rel="noreferrer" aria-label="X">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 4h4.3l4.2 5.6L17.7 4H21l-6.4 8.2L21 20h-4.2l-4.6-6.1L6.3 20H3l7-8.7L4 4z"/>
+            </svg>
+          </a>
+          <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.9.6-3.5-1.2-3.5-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.3-.3-4.7-1.1-4.7-5a4 4 0 0 1 1.1-2.8c-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 2.9 1.1a10 10 0 0 1 5.2 0c2-1.4 2.9-1.1 2.9-1.1.6 1.4.2 2.5.1 2.8a4 4 0 0 1 1.1 2.8c0 3.9-2.4 4.7-4.7 5 .4.3.8.9.8 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/>
+            </svg>
+          </a>
+        </div>
       </div>
 
       <div class="footer-col">
@@ -364,27 +245,7 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  /* ✅ Auto-generate AI image on refresh */
-  const contactImages = {
-    contactAi: [
-      "https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1600&q=80",
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1600&q=80"
-    ]
-  };
 
-  function pickRandom(arr){
-    return arr[Math.floor(Math.random() * arr.length)];
-  }
-
-  document.querySelectorAll("img[data-auto-img]").forEach(img => {
-    const key = img.getAttribute("data-auto-img");
-    const pool = contactImages[key];
-    if(pool && pool.length){
-      img.src = pickRandom(pool);
-    }
-  });
 </script>
 
 <script src="assets/js/main.js"></script>

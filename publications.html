@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Publications — AURORA NEXUS AI LAB</title>
   <meta name="description" content="Research publications by Aurora Nexus AI Lab."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
   <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
-<body>
+<body class="page-publications">
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header>
@@ -24,21 +28,34 @@
       <ul>
         <li><a class="nav-link" data-nav href="index.html">Home 1</a></li>
         <li><a class="nav-link" data-nav href="home-2.html">Home 2</a></li>
-        <li><a class="nav-link" data-nav href="dashboard.html">Dashboard</a></li>
         <li><a class="nav-link" data-nav href="services.html">Services</a></li>
         <li><a class="nav-link" data-nav href="publications.html">Publications</a></li>
         <li><a class="nav-link" data-nav href="team.html">Team</a></li>
         <li><a class="nav-link" data-nav href="blog.html">Blog</a></li>
         <li><a class="nav-link" data-nav href="contact.html">Contact</a></li>
-        <li><a class="nav-link" data-nav href="login.html">Login</a></li>
-        <li><a class="nav-link" data-nav href="signup.html">Sign Up</a></li>
+        <li class="nav-profile-menu">
+          <button class="nav-link nav-profile-trigger" type="button" aria-haspopup="true">Profile</button>
+          <ul class="nav-profile-list" aria-label="Profile">
+            <li><a class="nav-link" href="login.html">Login</a></li>
+            <li><a class="nav-link" href="signup.html">Sign Up</a></li>
+            <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
 
     <div class="nav-actions">
-      <button class="icon-btn" data-theme-toggle aria-label="Toggle light/dark theme">☾</button>
-      <button class="icon-btn hamburger" data-open-drawer aria-label="Open mobile menu">☰</button>
-      <a class="primary-btn" href="contact.html">Partner With Us</a>
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle light/dark theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3.5v2.3M12 18.2v2.3M4.9 5.1l1.6 1.6M17.5 17.7l1.6 1.6M3.5 12h2.3M18.2 12h2.3M5.1 19.1l1.6-1.6M17.7 6.5l1.6-1.6"/>
+          <circle cx="12" cy="12" r="4.2"/>
+        </svg>
+      </button>
+      <button class="icon-btn hamburger" data-open-drawer aria-label="Open mobile menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.8" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
     </div>
   </div>
 </header>
@@ -61,18 +78,11 @@
     <div class="drawer-links">
       <a href="index.html">Home 1</a>
       <a href="home-2.html">Home 2</a>
-      <a href="dashboard.html">Dashboard</a>
       <a href="services.html">Services</a>
       <a href="publications.html">Publications</a>
       <a href="team.html">Team</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
-      <a href="login.html">Login</a>
-      <a href="signup.html">Sign Up</a>
-
-      <button class="primary-btn" style="width:100%" data-theme-toggle aria-label="Toggle theme">
-        Toggle Theme
-      </button>
     </div>
   </div>
 </div>
@@ -80,7 +90,7 @@
 <main id="main">
 
   <!-- HERO -->
-  <section class="page-hero">
+  <section class="page-hero center">
     <div class="container reveal">
       <h2>Publications</h2>
       <p>
@@ -95,7 +105,7 @@
         <a class="secondary-btn" href="#areas" style="height:44px; display:inline-flex; align-items:center;">
           Research Areas
         </a>
-        <a class="link-btn" href="#library">Go to Library <span class="arrow">→</span></a>
+        <a class="link-btn" href="#library">Go to Library <span class="arrow">&rarr;</span></a>
       </div>
     </div>
   </section>
@@ -103,8 +113,14 @@
   <!-- STATS -->
   <section class="section">
     <div class="container">
-      <div class="grid-3">
-        <div class="card reveal">
+      <div class="grid-3 center-grid">
+        <div class="card center reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 5h9a3 3 0 0 1 3 3v11H8a3 3 0 0 0-3 3z"/>
+              <path d="M5 5v14a3 3 0 0 1 3-3h9"/>
+            </svg>
+          </div>
           <span class="badge">Library</span>
           <h4>18+ Publications</h4>
           <p class="meta">Peer-level research output with strict evaluation and reporting discipline.</p>
@@ -114,7 +130,13 @@
           </div>
         </div>
 
-        <div class="card reveal">
+        <div class="card center reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="7"/>
+              <path d="M8.5 12.5l2.2 2.2 4.8-4.8"/>
+            </svg>
+          </div>
           <span class="badge">Quality</span>
           <h4>Reproducible Experiments</h4>
           <p class="meta">Clear methodology + transparent metrics for trust and enterprise adoption.</p>
@@ -124,7 +146,14 @@
           </div>
         </div>
 
-        <div class="card reveal">
+        <div class="card center reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 7h10v4H7z"/>
+              <path d="M5 11h14v7H5z"/>
+              <path d="M9 11v7M15 11v7"/>
+            </svg>
+          </div>
           <span class="badge">Collaboration</span>
           <h4>Industry Partnerships</h4>
           <p class="meta">We co-author with teams to bring research into production at scale.</p>
@@ -140,7 +169,7 @@
   <!-- RESEARCH AREAS -->
   <section class="section" id="areas">
     <div class="container">
-      <div class="section-head reveal">
+      <div class="section-head center reveal">
         <div>
           <h3>Research Areas</h3>
           <p>Each domain has published methodology, metrics, and implementation pathways.</p>
@@ -148,20 +177,38 @@
         <span class="badge">Frontier AI Focus</span>
       </div>
 
-      <div class="grid-3">
-        <article class="card reveal">
+      <div class="grid-3 center-grid">
+        <article class="card center reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 4l7 3v5c0 4.4-3 7.7-7 8-4-.3-7-3.6-7-8V7l7-3z"/>
+            </svg>
+          </div>
           <span class="badge">Alignment</span>
           <h4>Safety, Evals & Robustness</h4>
           <p>Policy compliance, red-teaming, jailbreak testing, hallucination reduction, and audit-ready evaluation.</p>
         </article>
 
-        <article class="card reveal">
+        <article class="card center reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h6"/>
+              <path d="M9 8l4 4-4 4"/>
+              <path d="M13 12h6"/>
+            </svg>
+          </div>
           <span class="badge">Systems</span>
           <h4>Low-Latency Optimization</h4>
           <p>Inference acceleration, routing, caching, quantization, distillation, and cost reduction at scale.</p>
         </article>
 
-        <article class="card reveal">
+        <article class="card center reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="7"/>
+              <path d="M12 5v4M12 15v4M5 12h4M15 12h4"/>
+            </svg>
+          </div>
           <span class="badge">Applied AI</span>
           <h4>Private RAG & Agents</h4>
           <p>Secure knowledge assistants with governance, observability, and confidential retrieval pipelines.</p>
@@ -173,18 +220,25 @@
   <!-- FEATURED PAPERS -->
   <section class="section">
     <div class="container">
-      <div class="section-head reveal">
+      <div class="section-head center reveal">
         <div>
           <h3>Featured Papers</h3>
           <p>High-impact publications selected for enterprise relevance and citation clarity.</p>
         </div>
-        <a class="link-btn" href="#library">Browse all <span class="arrow">→</span></a>
+        <a class="link-btn" href="#library">Browse all <span class="arrow">&rarr;</span></a>
       </div>
 
-      <div class="blog-grid">
+      <div class="blog-grid center">
         <article class="post reveal">
           <img data-auto-img="pub1" loading="lazy" alt="AI paper featured image">
           <div class="post-body">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 4h7l4 4v12H7z"/>
+                <path d="M14 4v4h4"/>
+                <path d="M9 13h7M9 17h7"/>
+              </svg>
+            </div>
             <span class="badge">2026 • Safety</span>
             <h4>Guarded Reasoning: Safety Constraints in Long-Context LLMs</h4>
             <p>Evaluation framework for safety constraints, scalable long-context robustness, and alignment scoring.</p>
@@ -198,6 +252,12 @@
         <article class="post reveal">
           <img data-auto-img="pub2" loading="lazy" alt="AI distillation featured image">
           <div class="post-body">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 16v-6M12 16v-9M18 16v-4"/>
+                <path d="M5 19h14"/>
+              </svg>
+            </div>
             <span class="badge">2025 • Systems</span>
             <h4>Latency-Aware Distillation for Real-time Inference</h4>
             <p>Distillation pipelines designed for enterprise latency needs with minimal quality loss.</p>
@@ -211,6 +271,12 @@
         <article class="post reveal">
           <img data-auto-img="pub3" loading="lazy" alt="Secure RAG featured image">
           <div class="post-body">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="6" y="11" width="12" height="8" rx="2"/>
+                <path d="M9 11V9a3 3 0 0 1 6 0v2"/>
+              </svg>
+            </div>
             <span class="badge">2024 • Privacy</span>
             <h4>Privacy-First Retrieval Augmentation for Sensitive Domains</h4>
             <p>RAG architecture with governance & confidentiality controls for regulated organizations.</p>
@@ -227,7 +293,7 @@
   <!-- FULL LIBRARY -->
   <section class="section" id="library">
     <div class="container">
-      <div class="section-head reveal">
+      <div class="section-head center reveal">
         <div>
           <h3>Publication Library</h3>
           <p>A clean publication list with premium interaction design. Each item has working actions.</p>
@@ -235,7 +301,7 @@
         <span class="badge">Updated yearly</span>
       </div>
 
-      <div class="list">
+      <div class="list center">
 
         <div class="list-item reveal">
           <div class="pill">2026</div>
@@ -340,6 +406,23 @@
           </div>
         </div>
         <p>Our publication pipeline emphasizes integrity, reproducibility, and clarity.</p>
+        <div class="social footer-social">
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.5 8.5h-3v10h3v-10zm-1.5-4a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zm5.5 4h-2.8v10h2.8v-5.2c0-1.4.5-2.3 1.8-2.3 1 0 1.6.7 1.9 1.4.1.2.1.6.1.9v5.2h2.8v-5.6c0-3-1.6-4.4-3.7-4.4-1.7 0-2.5 1-2.9 1.6v-1.3z"/>
+            </svg>
+          </a>
+          <a href="https://x.com" target="_blank" rel="noreferrer" aria-label="X">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 4h4.3l4.2 5.6L17.7 4H21l-6.4 8.2L21 20h-4.2l-4.6-6.1L6.3 20H3l7-8.7L4 4z"/>
+            </svg>
+          </a>
+          <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.9.6-3.5-1.2-3.5-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.3-.3-4.7-1.1-4.7-5a4 4 0 0 1 1.1-2.8c-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 2.9 1.1a10 10 0 0 1 5.2 0c2-1.4 2.9-1.1 2.9-1.1.6 1.4.2 2.5.1 2.8a4 4 0 0 1 1.1 2.8c0 3.9-2.4 4.7-4.7 5 .4.3.8.9.8 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/>
+            </svg>
+          </a>
+        </div>
       </div>
 
       <div class="footer-col">

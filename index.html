@@ -5,9 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AURORA NEXUS AI LAB — AI Research Lab</title>
   <meta name="description" content="Aurora Nexus AI Lab is a premium AI research lab building trustworthy models, safe systems, and frontier AI research with real-world enterprise impact."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
   <link rel="stylesheet" href="assets/css/style.css"/>
 </head>
-<body>
+<body class="page-home-1">
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header>
@@ -24,22 +28,34 @@
       <ul>
         <li><a class="nav-link" data-nav href="index.html">Home 1</a></li>
         <li><a class="nav-link" data-nav href="home-2.html">Home 2</a></li>
-        <li><a class="nav-link" data-nav href="dashboard.html">Dashboard</a></li>
         <li><a class="nav-link" data-nav href="services.html">Services</a></li>
         <li><a class="nav-link" data-nav href="publications.html">Publications</a></li>
         <li><a class="nav-link" data-nav href="team.html">Team</a></li>
         <li><a class="nav-link" data-nav href="blog.html">Blog</a></li>
         <li><a class="nav-link" data-nav href="contact.html">Contact</a></li>
-        <li><a class="nav-link" data-nav href="login.html">Login</a></li>
-        <li><a class="nav-link" data-nav href="signup.html">Sign Up</a></li>
-
+        <li class="nav-profile-menu">
+          <button class="nav-link nav-profile-trigger" type="button" aria-haspopup="true">Profile</button>
+          <ul class="nav-profile-list" aria-label="Profile">
+            <li><a class="nav-link" href="login.html">Login</a></li>
+            <li><a class="nav-link" href="signup.html">Sign Up</a></li>
+            <li><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </li>
       </ul>
     </nav>
 
     <div class="nav-actions">
-      <button class="icon-btn" data-theme-toggle aria-label="Toggle light/dark theme">☾</button>
-      <button class="icon-btn hamburger" data-open-drawer aria-label="Open mobile menu">☰</button>
-      <a class="primary-btn" href="contact.html" aria-label="Go to contact page">Partner With Us</a>
+      <button class="icon-btn" data-theme-toggle aria-label="Toggle light/dark theme">
+        <svg viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3.5v2.3M12 18.2v2.3M4.9 5.1l1.6 1.6M17.5 17.7l1.6 1.6M3.5 12h2.3M18.2 12h2.3M5.1 19.1l1.6-1.6M17.7 6.5l1.6-1.6"/>
+          <circle cx="12" cy="12" r="4.2"/>
+        </svg>
+      </button>
+      <button class="icon-btn hamburger" data-open-drawer aria-label="Open mobile menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true" stroke-width="1.8" stroke-linecap="round">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
     </div>
   </div>
 </header>
@@ -62,13 +78,11 @@
     <div class="drawer-links">
       <a href="index.html">Home 1</a>
       <a href="home-2.html">Home 2</a>
-      <a href="dashboard.html">Dashboard</a>
       <a href="services.html">Services</a>
       <a href="publications.html">Publications</a>
       <a href="team.html">Team</a>
       <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
-      <button class="primary-btn" style="width:100%" data-theme-toggle aria-label="Toggle theme">Toggle Theme</button>
     </div>
   </div>
 </div>
@@ -76,9 +90,9 @@
 <main id="main">
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero hero--center">
     <div class="container hero-grid">
-      <div class="reveal">
+      <div class="hero-content reveal">
         <div class="kicker">
           <strong>Frontier AI Research</strong>
           <span>Trusted by enterprise innovators</span>
@@ -96,7 +110,7 @@
         <div class="hero-actions">
           <a class="primary-btn" href="dashboard.html">Open Dashboard</a>
           <a class="secondary-btn" href="services.html">Explore Services</a>
-          <a class="link-btn" href="#proof">Lab Metrics <span class="arrow">→</span></a>
+          <a class="link-btn" href="#proof">Lab Metrics <span class="arrow">&rarr;</span></a>
         </div>
       </div>
 
@@ -114,26 +128,50 @@
   <!-- TRUST LOGOS -->
   <section class="section">
     <div class="container">
-      <div class="section-head reveal">
+      <div class="section-head center reveal">
         <div>
           <h3>Trusted Research Workflow</h3>
-          <p>Our process matches premium enterprise delivery: governance → evaluation → deployment → monitoring.</p>
+          <p>Our process matches premium enterprise delivery: governance &rarr; evaluation &rarr; deployment &rarr; monitoring.</p>
         </div>
-        <span class="badge">Cinematic UX • Corporate trust</span>
+        <span class="badge">Cinematic UX &bull; Corporate trust</span>
       </div>
 
-      <div class="grid-3">
-        <article class="card reveal">
+      <div class="section-visual reveal">
+        <img loading="lazy" alt="AI infrastructure visualization"
+             src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1600&q=80"/>
+      </div>
+
+      <div class="grid-3 center-grid">
+        <article class="card center reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="7"/>
+              <path d="M8.5 12.5l2.2 2.2 4.8-4.8"/>
+            </svg>
+          </div>
           <span class="badge">Quality</span>
           <h4>Reproducible Research</h4>
           <p>Experiment tracking, versioning, and auditable evaluation pipelines to maintain scientific integrity.</p>
         </article>
-        <article class="card reveal">
+        <article class="card center reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="11" width="12" height="8" rx="2"/>
+              <path d="M9 11V9a3 3 0 0 1 6 0v2"/>
+            </svg>
+          </div>
           <span class="badge">Security</span>
           <h4>Privacy & Governance</h4>
           <p>Secure deployment patterns for regulated industries: policy, retention rules, and safety boundaries.</p>
         </article>
-        <article class="card reveal">
+        <article class="card center reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 12a8 8 0 1 1 16 0"/>
+              <path d="M12 12l4-4"/>
+              <circle cx="12" cy="12" r="1.6"/>
+            </svg>
+          </div>
           <span class="badge">Performance</span>
           <h4>Scalable Systems</h4>
           <p>Cost reduction + fast inference through model routing, quantization, caching, and profiling.</p>
@@ -145,26 +183,49 @@
   <!-- METRICS -->
   <section id="proof" class="section">
     <div class="container">
-      <div class="section-head reveal">
+      <div class="section-head center reveal">
         <div>
           <h3>Lab Performance Metrics</h3>
           <p>Numbers build credibility. These metrics are shown in the dashboard too.</p>
         </div>
-        <a class="link-btn" href="dashboard.html">View Dashboard <span class="arrow">→</span></a>
+        <a class="link-btn" href="dashboard.html">View Dashboard <span class="arrow">&rarr;</span></a>
       </div>
 
-      <div class="grid-3">
-        <article class="card reveal">
+      <div class="section-visual reveal">
+        <img loading="lazy" alt="AI research hardware closeup"
+             src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80"/>
+      </div>
+
+      <div class="grid-3 center-grid">
+        <article class="card center reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 17l4-4 4 3 6-7"/>
+              <path d="M4 19h16"/>
+            </svg>
+          </div>
           <span class="badge">Impact</span>
           <h4>42+ Research Experiments / month</h4>
           <p>Stable, reproducible research throughput with strong documentation standards.</p>
         </article>
-        <article class="card reveal">
+        <article class="card center reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 4l7 3v5c0 4.4-3 7.7-7 8-4-.3-7-3.6-7-8V7l7-3z"/>
+            </svg>
+          </div>
           <span class="badge">Safety</span>
           <h4>96% Safety Score Average</h4>
           <p>Measured across alignment constraints, toxicity checks, jailbreak resistance, and red-team results.</p>
         </article>
-        <article class="card reveal">
+        <article class="card center reveal">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h6"/>
+              <path d="M9 8l4 4-4 4"/>
+              <path d="M13 12h6"/>
+            </svg>
+          </div>
           <span class="badge">Speed</span>
           <h4>Up to 4.8× Faster Inference</h4>
           <p>Latency reduction using distillation, quantization, optimized routing, and caching strategies.</p>
@@ -174,14 +235,14 @@
   </section>
 
   <!-- FEATURED PUBLICATIONS -->
-  <section class="section">
+  <section class="section featured-publications">
     <div class="container">
-      <div class="section-head reveal">
+      <div class="section-head center reveal">
         <div>
           <h3>Featured Publications</h3>
           <p>Premium research writing designed for citations and real-world credibility.</p>
         </div>
-        <a class="link-btn" href="publications.html">View all <span class="arrow">→</span></a>
+        <a class="link-btn" href="publications.html">View all <span class="arrow">&rarr;</span></a>
       </div>
 
       <div class="list">
@@ -227,68 +288,120 @@
   <!-- TEAM PREVIEW -->
   <section class="section">
     <div class="container">
-      <div class="section-head reveal">
+      <div class="section-head center reveal">
         <div>
           <h3>Meet the Core Team</h3>
           <p>Premium team profiles. Your team can replace names/photos anytime.</p>
         </div>
-        <a class="link-btn" href="team.html">Full team <span class="arrow">→</span></a>
+        <a class="link-btn" href="team.html">Full team <span class="arrow">&rarr;</span></a>
       </div>
 
-      <div class="team-grid">
-        <article class="profile reveal">
-          <img loading="lazy" alt="AI research leader"
-               src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1200&q=80"/>
-          <div class="p-body">
-            <h4>Dr. Adrian Verma</h4>
-            <p>Lab Director • AI Safety & Governance</p>
-            <div class="social">
-              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">in</a>
-              <a href="https://x.com" target="_blank" rel="noreferrer">x</a>
-              <a href="contact.html">✉</a>
-            </div>
+      <div class="team-preview">
+        <article class="team-card reveal">
+          <div class="avatar">
+            <img loading="lazy" alt="AI research leader"
+                 src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1200&q=80"/>
+          </div>
+          <h4>Dr. Adrian Verma</h4>
+          <p class="role">Lab Director &bull; AI Safety &amp; Governance</p>
+          <div class="social">
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.5 8.5h-3v10h3v-10zm-1.5-4a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zm5.5 4h-2.8v10h2.8v-5.2c0-1.4.5-2.3 1.8-2.3 1 0 1.6.7 1.9 1.4.1.2.1.6.1.9v5.2h2.8v-5.6c0-3-1.6-4.4-3.7-4.4-1.7 0-2.5 1-2.9 1.6v-1.3z"/>
+              </svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noreferrer" aria-label="X">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 4h4.3l4.2 5.6L17.7 4H21l-6.4 8.2L21 20h-4.2l-4.6-6.1L6.3 20H3l7-8.7L4 4z"/>
+              </svg>
+            </a>
+            <a href="contact.html" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 6h20v12H2z"/>
+                <path d="M2 6l10 7 10-7"/>
+              </svg>
+            </a>
           </div>
         </article>
 
-        <article class="profile reveal">
-          <img loading="lazy" alt="AI engineer portrait"
-               src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80"/>
-          <div class="p-body">
-            <h4>Meera Iyer</h4>
-            <p>Systems Lead • Inference Optimization</p>
-            <div class="social">
-              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">in</a>
-              <a href="https://github.com" target="_blank" rel="noreferrer">GH</a>
-              <a href="contact.html">✉</a>
-            </div>
+        <article class="team-card reveal">
+          <div class="avatar">
+            <img loading="lazy" alt="AI engineer portrait"
+                 src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80"/>
+          </div>
+          <h4>Meera Iyer</h4>
+          <p class="role">Systems Lead &bull; Inference Optimization</p>
+          <div class="social">
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.5 8.5h-3v10h3v-10zm-1.5-4a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zm5.5 4h-2.8v10h2.8v-5.2c0-1.4.5-2.3 1.8-2.3 1 0 1.6.7 1.9 1.4.1.2.1.6.1.9v5.2h2.8v-5.6c0-3-1.6-4.4-3.7-4.4-1.7 0-2.5 1-2.9 1.6v-1.3z"/>
+              </svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.9.6-3.5-1.2-3.5-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.3-.3-4.7-1.1-4.7-5a4 4 0 0 1 1.1-2.8c-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 2.9 1.1a10 10 0 0 1 5.2 0c2-1.4 2.9-1.1 2.9-1.1.6 1.4.2 2.5.1 2.8a4 4 0 0 1 1.1 2.8c0 3.9-2.4 4.7-4.7 5 .4.3.8.9.8 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/>
+              </svg>
+            </a>
+            <a href="contact.html" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 6h20v12H2z"/>
+                <path d="M2 6l10 7 10-7"/>
+              </svg>
+            </a>
           </div>
         </article>
 
-        <article class="profile reveal">
-          <img loading="lazy" alt="AI analyst portrait"
-               src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=1200&q=80"/>
-          <div class="p-body">
-            <h4>Fatima Rahman</h4>
-            <p>Research Scientist • Robust Evaluation</p>
-            <div class="social">
-              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">in</a>
-              <a href="https://x.com" target="_blank" rel="noreferrer">x</a>
-              <a href="contact.html">✉</a>
-            </div>
+        <article class="team-card reveal">
+          <div class="avatar">
+            <img loading="lazy" alt="AI analyst portrait"
+                 src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=1200&q=80"/>
+          </div>
+          <h4>Fatima Rahman</h4>
+          <p class="role">Research Scientist &bull; Robust Evaluation</p>
+          <div class="social">
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.5 8.5h-3v10h3v-10zm-1.5-4a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zm5.5 4h-2.8v10h2.8v-5.2c0-1.4.5-2.3 1.8-2.3 1 0 1.6.7 1.9 1.4.1.2.1.6.1.9v5.2h2.8v-5.6c0-3-1.6-4.4-3.7-4.4-1.7 0-2.5 1-2.9 1.6v-1.3z"/>
+              </svg>
+            </a>
+            <a href="https://x.com" target="_blank" rel="noreferrer" aria-label="X">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 4h4.3l4.2 5.6L17.7 4H21l-6.4 8.2L21 20h-4.2l-4.6-6.1L6.3 20H3l7-8.7L4 4z"/>
+              </svg>
+            </a>
+            <a href="contact.html" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 6h20v12H2z"/>
+                <path d="M2 6l10 7 10-7"/>
+              </svg>
+            </a>
           </div>
         </article>
 
-        <article class="profile reveal">
-          <img loading="lazy" alt="AI developer portrait"
-               src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80"/>
-          <div class="p-body">
-            <h4>Santhosh Kumar</h4>
-            <p>Applied AI • Private RAG Systems</p>
-            <div class="social">
-              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">in</a>
-              <a href="https://github.com" target="_blank" rel="noreferrer">GH</a>
-              <a href="contact.html">✉</a>
-            </div>
+        <article class="team-card reveal">
+          <div class="avatar">
+            <img loading="lazy" alt="AI developer portrait"
+                 src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80"/>
+          </div>
+          <h4>Santhosh Kumar</h4>
+          <p class="role">Applied AI &bull; Private RAG Systems</p>
+          <div class="social">
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M6.5 8.5h-3v10h3v-10zm-1.5-4a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zm5.5 4h-2.8v10h2.8v-5.2c0-1.4.5-2.3 1.8-2.3 1 0 1.6.7 1.9 1.4.1.2.1.6.1.9v5.2h2.8v-5.6c0-3-1.6-4.4-3.7-4.4-1.7 0-2.5 1-2.9 1.6v-1.3z"/>
+              </svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.9.6-3.5-1.2-3.5-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.3-.3-4.7-1.1-4.7-5a4 4 0 0 1 1.1-2.8c-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 2.9 1.1a10 10 0 0 1 5.2 0c2-1.4 2.9-1.1 2.9-1.1.6 1.4.2 2.5.1 2.8a4 4 0 0 1 1.1 2.8c0 3.9-2.4 4.7-4.7 5 .4.3.8.9.8 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/>
+              </svg>
+            </a>
+            <a href="contact.html" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 6h20v12H2z"/>
+                <path d="M2 6l10 7 10-7"/>
+              </svg>
+            </a>
           </div>
         </article>
       </div>
@@ -298,15 +411,15 @@
   <!-- BLOG PREVIEW -->
   <section class="section">
     <div class="container">
-      <div class="section-head reveal">
+      <div class="section-head center reveal">
         <div>
           <h3>Latest Insights</h3>
           <p>Blog posts designed for decision-makers: technical clarity with business outcomes.</p>
         </div>
-        <a class="link-btn" href="blog.html">Browse blog <span class="arrow">→</span></a>
+        <a class="link-btn" href="blog.html">Browse blog <span class="arrow">&rarr;</span></a>
       </div>
 
-      <div class="blog-grid">
+      <div class="blog-grid center">
         <article class="post reveal">
           <img loading="lazy" alt="Abstract AI visualization"
                src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=1400&q=80"/>
@@ -320,11 +433,11 @@
 
         <article class="post reveal">
           <img loading="lazy" alt="GPU servers"
-               src="https://images.unsplash.com/photo-1555617981-dac3880eac6c?auto=format&fit=crop&w=1400&q=80"/>
+               src="https://eu-images.contentstack.com/v3/assets/blt6d90778a997de1cd/blt41dc5f14d8586e1e/675fd155828566e310714e06/genai_Anggalih_Prasetya_shutterstock.jpg"/>
           <div class="post-body">
             <span class="badge">Systems</span>
             <h4>Inference optimization that reduces cost</h4>
-            <p>Profiling → batching → quantization strategy → evaluation gates.</p>
+            <p>Profiling &rarr; batching &rarr; quantization strategy &rarr; evaluation gates.</p>
             <div class="actions-row"><a class="small-btn" href="blog.html">Read article</a></div>
           </div>
         </article>
@@ -357,6 +470,23 @@
           </div>
         </div>
         <p>We help organizations deploy AI responsibly with premium engineering discipline and world-class research.</p>
+        <div class="social footer-social">
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.5 8.5h-3v10h3v-10zm-1.5-4a1.75 1.75 0 1 0 0 3.5 1.75 1.75 0 0 0 0-3.5zm5.5 4h-2.8v10h2.8v-5.2c0-1.4.5-2.3 1.8-2.3 1 0 1.6.7 1.9 1.4.1.2.1.6.1.9v5.2h2.8v-5.6c0-3-1.6-4.4-3.7-4.4-1.7 0-2.5 1-2.9 1.6v-1.3z"/>
+            </svg>
+          </a>
+          <a href="https://x.com" target="_blank" rel="noreferrer" aria-label="X">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 4h4.3l4.2 5.6L17.7 4H21l-6.4 8.2L21 20h-4.2l-4.6-6.1L6.3 20H3l7-8.7L4 4z"/>
+            </svg>
+          </a>
+          <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.9.6-3.5-1.2-3.5-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.4 1.1 3 .8.1-.7.4-1.1.7-1.4-2.3-.3-4.7-1.1-4.7-5a4 4 0 0 1 1.1-2.8c-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 2.9 1.1a10 10 0 0 1 5.2 0c2-1.4 2.9-1.1 2.9-1.1.6 1.4.2 2.5.1 2.8a4 4 0 0 1 1.1 2.8c0 3.9-2.4 4.7-4.7 5 .4.3.8.9.8 1.9v2.8c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/>
+            </svg>
+          </a>
+        </div>
       </div>
 
       <div class="footer-col">
