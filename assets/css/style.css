@@ -571,14 +571,33 @@ header .container {
 .neural-canvas {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.4;
+  opacity: 0.95;
+  /* Ultra-high visibility for premium lines */
+}
+
+/* Enhanced contrast overlay to make animation and text both stand out */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(circle at center, transparent 20%, var(--bg) 90%);
+  opacity: 0.75;
+  /* Stronger contrast against edges */
+}
+
+[data-theme="light"] .hero-overlay {
+  opacity: 0.55;
 }
 
 .hero .container {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  /* Content must be above all background layers */
 }
 
 .hero-grid {
@@ -1279,6 +1298,7 @@ h2.title {
   width: 100%;
   height: 220px;
   object-fit: cover;
+  object-position: top;
 }
 
 .team-panel.focus-right img {
@@ -1701,14 +1721,41 @@ footer {
   background-position: center;
 }
 
+/* Light Mode Auth Card Visibility Fix */
 [data-theme="light"] .page-login .auth-card,
 [data-theme="light"] .page-signup .auth-card {
-  color: #fff;
+  --text: #ffffff;
+  --muted: rgba(255, 255, 255, 0.7);
+  --border: rgba(255, 255, 255, 0.2);
+  color: var(--text);
 }
 
+/* Ensure inputs are visible on the dark card in light mode */
+[data-theme="light"] .page-login .auth-card input,
+[data-theme="light"] .page-signup .auth-card input {
+  background: rgba(0, 0, 0, 0.25) !important;
+  color: #ffffff !important;
+  border-color: var(--border) !important;
+}
+
+[data-theme="light"] .page-login .auth-card input::placeholder,
+[data-theme="light"] .page-signup .auth-card input::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Fix specific elements that might not inherit correctly */
+[data-theme="light"] .page-login .auth-card .social-btn,
+[data-theme="light"] .page-signup .auth-card .social-btn {
+  border-color: var(--border);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Ensure labels are white */
+[data-theme="light"] .page-login .auth-card label,
+[data-theme="light"] .page-signup .auth-card label,
 [data-theme="light"] .page-login .auth-card .form-label,
 [data-theme="light"] .page-signup .auth-card .form-label {
-  color: #fff;
+  color: #fff !important;
 }
 
 /* Hero Button Visibility Fix for Light Mode */
@@ -1732,11 +1779,6 @@ footer {
 [data-theme="light"] .page-hero .link-btn:hover {
   color: var(--text) !important;
   background: rgba(255, 255, 255, 0.04) !important;
-}
-
-[data-theme="light"] .page-login .auth-card .form-label,
-[data-theme="light"] .page-signup .auth-card .form-label {
-  color: #fff;
 }
 
 /* Responsive */

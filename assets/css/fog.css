@@ -1,0 +1,116 @@
+/* ===========================
+   PREMIUM FOG ANIMATION
+   =========================== */
+.fog-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    pointer-events: none;
+    overflow: hidden;
+    /* Use hardware acceleration */
+    transform: translateZ(0);
+}
+
+.fog-layer {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform-origin: center center;
+    will-change: transform;
+}
+
+/* Layer 1: Base slow drift (White/Gray Mist) */
+.fog-layer-1 {
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.02) 0%, transparent 60%);
+    animation: fogDrift 45s infinite linear;
+    filter: blur(60px);
+    opacity: 0.7;
+}
+
+/* Layer 2: Counter movement (Cyan Tint) */
+.fog-layer-2 {
+    background: radial-gradient(ellipse at 40% 60%, rgba(52, 230, 194, 0.03) 0%, transparent 50%);
+    animation: fogDriftReverse 55s infinite linear;
+    filter: blur(80px);
+    opacity: 0.5;
+}
+
+/* Layer 3: Subtle highlights (Blue Tint) */
+.fog-layer-3 {
+    background: radial-gradient(circle at 70% 30%, rgba(93, 176, 255, 0.03) 0%, transparent 55%);
+    animation: fogPulse 25s infinite ease-in-out;
+    filter: blur(50px);
+    opacity: 0.4;
+}
+
+/* Light mode adjustments for fog */
+[data-theme="light"] .fog-layer-1 {
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.02) 0%, transparent 60%);
+}
+
+[data-theme="light"] .fog-layer-2 {
+    background: radial-gradient(ellipse at 40% 60%, rgba(52, 230, 194, 0.05) 0%, transparent 50%);
+}
+
+[data-theme="light"] .fog-layer-3 {
+    background: radial-gradient(circle at 70% 30%, rgba(93, 176, 255, 0.05) 0%, transparent 55%);
+}
+
+/* Animations */
+@keyframes fogDrift {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate3d(-5%, -2%, 0) rotate(2deg);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+}
+
+@keyframes fogDriftReverse {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate3d(5%, 3%, 0) rotate(-2deg);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+}
+
+@keyframes fogPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.55;
+    }
+}
+
+/* Mobile Optimization: Reduce load */
+@media (max-width: 768px) {
+    .fog-wrapper {
+        display: none;
+        /* Disable on mobile if performance is an issue, or simplify */
+    }
+}

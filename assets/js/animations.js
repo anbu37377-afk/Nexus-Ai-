@@ -17,96 +17,177 @@ function initNeuralMesh() {
 
     const ctx = canvas.getContext("2d");
     let w, h, particles;
+    let animationFrameId;
 
-    // Optimized particle count for performance
-    const particleCount = 60;
-    const connectionDistance = 160;
-    const mouse = { x: null, y: null, radius: 150 };
+    // Configuration for premium feel and high visibility
+    const config = {
+        particleCount: window.innerWidth < 768 ? 45 : 95,
+        connectionDist: 170, // Increased for more connections
+        baseSpeedY: -0.32,
+        baseSpeedX: 0.1,
+        // Dark Mode: Emerald/Teal glow
+        colorDark: "52, 230, 194",
+        // Light Mode: Deep Sapphire for ultra-high contrast on white bg
+        colorLight: "20, 50, 180",
+        mouseRadius: 220
+    };
 
-    window.addEventListener("mousemove", (e) => {
-        mouse.x = e.x;
-        mouse.y = e.y;
-    });
+    const mouse = { x: -1000, y: -1000 };
 
-    window.addEventListener("mouseout", () => {
-        mouse.x = null;
-        mouse.y = null;
-    });
+    // Dynamic contrast overlay to ensure premium visibility
+    let overlay = document.querySelector('.hero-overlay');
+    if (!overlay && canvas.parentElement) {
+        overlay = document.createElement('div');
+        overlay.className = 'hero-overlay';
+        canvas.parentElement.insertBefore(overlay, canvas.nextSibling);
 
-    function resize() {
-        w = canvas.width = canvas.offsetWidth;
-        h = canvas.height = canvas.offsetHeight;
-        initParticles();
+        Object.assign(overlay.style, {
+            position: 'absolute',
+            inset: '0',
+            pointerEvents: 'none',
+            zIndex: '0',
+            opacity: '0.6',
+            background: 'radial-gradient(circle at center, transparent 30%, var(--bg) 100%)'
+        });
     }
 
-    function initParticles() {
-        particles = [];
-        for (let i = 0; i < particleCount; i++) {
-            particles.push({
-                x: Math.random() * w,
-                y: Math.random() * h,
-                vx: (Math.random() - 0.5) * 0.4,
-                vy: (Math.random() - 0.5) * 0.4,
-                size: Math.random() * 2 + 1,
-            });
+    window.addEventListener("mousemove", (e) => {
+        const rect = canvas.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+    });
+
+    window.addEventListener("mouseleave", () => {
+        mouse.x = -1000;
+        mouse.y = -1000;
+    });
+
+    class Particle {
+        constructor() {
+            this.reset(true);
+        }
+
+        reset(initial = false) {
+            this.x = Math.random() * w;
+            this.y = initial ? Math.random() * h : h + 20;
+            this.z = Math.random() * 0.8 + 0.2;
+
+            this.size = (Math.random() * 2.2 + 0.8) * this.z; // Slightly larger nodes
+            this.vx = (Math.random() - 0.5) * 0.4 * this.z;
+            this.vy = (config.baseSpeedY * this.z) * 1.1 + (Math.random() - 0.5) * 0.08;
+
+            this.opacity = (Math.random() * 0.5 + 0.3) * this.z; // Stronger base opacity
+            this.pulseBias = Math.random() * Math.PI;
+        }
+
+        update() {
+            const dx = this.x - mouse.x;
+            const dy = this.y - mouse.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < config.mouseRadius) {
+                const force = (config.mouseRadius - dist) / config.mouseRadius;
+                const angle = Math.atan2(dy, dx);
+                this.vx += Math.cos(angle) * force * 0.1;
+                this.vy += Math.sin(angle) * force * 0.1;
+            }
+
+            this.vx *= 0.94;
+            this.x += this.vx + Math.sin(this.y * 0.005) * 0.15 * this.z;
+            this.y += this.vy;
+            this.pulseBias += 0.035;
+
+            if (this.y < -50) this.reset();
+            if (this.x < -50 || this.x > w + 50) this.reset();
+        }
+
+        draw() {
+            const isLight = document.documentElement.getAttribute("data-theme") === "light";
+            const color = isLight ? config.colorLight : config.colorDark;
+            const pulse = this.opacity + Math.sin(this.pulseBias) * 0.25;
+
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(${color}, ${Math.max(0.15, pulse)})`;
+
+            // Layered Glow
+            ctx.shadowBlur = isLight ? this.size * 5 : this.size * 12;
+            ctx.shadowColor = `rgba(${color}, ${pulse})`;
+            ctx.fill();
+            ctx.shadowBlur = 0;
         }
     }
 
-    function draw() {
+    function init() {
+        resize();
+        particles = [];
+        for (let i = 0; i < config.particleCount; i++) {
+            particles.push(new Particle());
+        }
+    }
+
+    function resize() {
+        const dpr = window.devicePixelRatio || 1;
+        const rect = canvas.getBoundingClientRect();
+        if (rect.width === 0 || rect.height === 0) return;
+
+        canvas.width = rect.width * dpr;
+        canvas.height = rect.height * dpr;
+        ctx.scale(dpr, dpr);
+        w = rect.width;
+        h = rect.height;
+    }
+
+    function animate() {
         ctx.clearRect(0, 0, w, h);
 
-        // Theme-aware particle color
         const isLight = document.documentElement.getAttribute("data-theme") === "light";
-        ctx.fillStyle = isLight ? "rgba(52, 230, 194, 0.4)" : "rgba(52, 230, 194, 0.5)";
-        ctx.strokeStyle = isLight ? "rgba(93, 176, 255, 0.08)" : "rgba(93, 176, 255, 0.12)";
-        ctx.lineWidth = 1;
+        const color = isLight ? config.colorLight : config.colorDark;
+
+        // HIGH VISIBILITY: Thicker Lines
+        ctx.lineWidth = isLight ? 1.4 : 0.8;
 
         for (let i = 0; i < particles.length; i++) {
             const p = particles[i];
-            p.x += p.vx;
-            p.y += p.vy;
-
-            if (p.x < 0 || p.x > w) p.vx *= -1;
-            if (p.y < 0 || p.y > h) p.vy *= -1;
-
-            // Mouse interaction
-            if (mouse.x && mouse.y) {
-                const dx = mouse.x - p.x;
-                const dy = mouse.y - p.y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < mouse.radius) {
-                    const force = (mouse.radius - dist) / mouse.radius;
-                    p.x -= dx * force * 0.02;
-                    p.y -= dy * force * 0.02;
-                }
-            }
-
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-            ctx.fill();
-
             for (let j = i + 1; j < particles.length; j++) {
                 const p2 = particles[j];
                 const dx = p.x - p2.x;
                 const dy = p.y - p2.y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
+                const distSq = dx * dx + dy * dy;
+                const thresholdSq = config.connectionDist * config.connectionDist;
 
-                if (dist < connectionDistance) {
-                    ctx.globalAlpha = 1 - (dist / connectionDistance);
-                    ctx.beginPath();
-                    ctx.moveTo(p.x, p.y);
-                    ctx.lineTo(p2.x, p2.y);
-                    ctx.stroke();
-                    ctx.globalAlpha = 1;
+                if (distSq < thresholdSq) {
+                    const alpha = (1 - distSq / thresholdSq) * p.opacity * p2.opacity;
+                    if (alpha > 0.05) {
+                        ctx.beginPath();
+                        // Never faint: minimum alpha floor + 2.5x boost
+                        const finalAlpha = Math.max(0.12, Math.min(1, alpha * 2.5));
+                        ctx.strokeStyle = `rgba(${color}, ${finalAlpha})`;
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(p2.x, p2.y);
+                        ctx.stroke();
+                    }
                 }
             }
         }
-        requestAnimationFrame(draw);
+
+        particles.forEach(p => {
+            p.update();
+            p.draw();
+        });
+
+        animationFrameId = requestAnimationFrame(animate);
     }
 
-    window.addEventListener("resize", resize);
-    resize();
-    draw();
+    const observer = new ResizeObserver(() => {
+        resize();
+    });
+    if (canvas.parentElement) {
+        observer.observe(canvas.parentElement);
+    }
+
+    init();
+    animate();
 }
 
 function initParallax() {
@@ -255,4 +336,3 @@ function initTextScramble() {
         fx.setText(originalText);
     });
 }
-
