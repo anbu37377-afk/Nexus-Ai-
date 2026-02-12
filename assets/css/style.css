@@ -1665,25 +1665,31 @@ footer {
     url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1600&q=80');
 }
 
+/* Light Mode Hero Reset (Match Home 1) */
+[data-theme="light"] .page-hero {
+  background-image: radial-gradient(circle at 80% 20%, rgba(52, 230, 194, 0.08) 0%, transparent 50%) !important;
+}
+
 /* Light Mode Hero Fixes */
-[data-theme="light"] .hero,
+/* Light Mode Text Reset */
 [data-theme="light"] .page-hero,
-[data-theme="light"] .page-hero h2,
-[data-theme="light"] .hero .title {
-  color: #ffffff !important;
+[data-theme="light"] .page-hero h2 {
+  color: var(--text) !important;
 }
 
-[data-theme="light"] .hero p,
 [data-theme="light"] .page-hero p,
-[data-theme="light"] .hero .lead,
 [data-theme="light"] .page-hero .muted,
-[data-theme="light"] .kicker span {
-  color: rgba(255, 255, 255, 0.8) !important;
+[data-theme="light"] .page-hero .kicker span {
+  color: var(--muted) !important;
 }
 
-[data-theme="light"] .kicker {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
+[data-theme="light"] .page-hero .kicker {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--border);
+}
+
+[data-theme="light"] .page-hero .kicker strong {
+  color: var(--text);
 }
 
 /* Auth Page Imagery */
@@ -1706,27 +1712,26 @@ footer {
 }
 
 /* Hero Button Visibility Fix for Light Mode */
-[data-theme="light"] .hero .secondary-btn,
+/* Hero Button Reset for Light Mode */
 [data-theme="light"] .page-hero .secondary-btn {
-  color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.3) !important;
-  background: rgba(255, 255, 255, 0.1) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
 }
 
-[data-theme="light"] .hero .link-btn,
 [data-theme="light"] .page-hero .link-btn {
-  color: rgba(255, 255, 255, 0.8) !important;
+  color: var(--muted) !important;
 }
 
-[data-theme="light"] .hero .secondary-btn:hover,
 [data-theme="light"] .page-hero .secondary-btn:hover {
-  background: rgba(255, 255, 255, 0.15) !important;
-  border-color: rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--shadowSoft);
+  border-color: rgba(93, 176, 255, 0.30) !important;
 }
 
-[data-theme="light"] .hero .link-btn:hover,
 [data-theme="light"] .page-hero .link-btn:hover {
-  color: #ffffff !important;
+  color: var(--text) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
 }
 
 [data-theme="light"] .page-login .auth-card .form-label,
