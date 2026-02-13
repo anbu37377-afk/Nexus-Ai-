@@ -1854,6 +1854,24 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .checkbox {
+    align-items: flex-start;
+    font-size: 11.5px;
+    white-space: normal;
+    gap: 10px;
+    text-align: left;
+    line-height: 1.4;
+  }
+
+  .checkbox input {
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .auth-form--single {
+    padding: 26px 15px;
+  }
+
   .hero {
     padding-top: 42px;
   }
