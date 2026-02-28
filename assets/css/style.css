@@ -187,6 +187,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  padding: 16px 0;
+  overflow-y: hidden;
   backdrop-filter: blur(16px);
   background: linear-gradient(180deg, rgba(7, 12, 16, 0.82), rgba(7, 12, 16, 0.55));
   border-bottom: 1px solid var(--border);
@@ -225,7 +227,7 @@ header::after {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: 16px 0;
+  padding: 0;
 }
 
 /* ✅ BRAND NEVER SHRINK */
@@ -740,6 +742,11 @@ h2.title {
   color: transparent;
 }
 
+[data-theme="light"] .page-home-1 .home-1-hero .gradient-text {
+  background-image: linear-gradient(135deg, #0f8a7c, #2b6fd8, #9f5f08);
+  -webkit-text-fill-color: transparent;
+}
+
 .lead {
   margin: 0 0 22px;
   color: var(--muted);
@@ -1050,13 +1057,13 @@ h2.title {
 }
 
 .list.center .list-item {
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   text-align: center;
 }
 
 .list.center .list-item .pill {
-  margin-bottom: 6px;
+  margin-bottom: 0;
 }
 
 .list.center .actions-row {
@@ -1748,6 +1755,12 @@ footer {
 [data-theme="light"] .page-signup .auth-card .social-btn {
   border-color: var(--border);
   background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.94);
+}
+
+[data-theme="dark"] .page-login .auth-card .social-btn,
+[data-theme="dark"] .page-signup .auth-card .social-btn {
+  color: rgba(255, 255, 255, 0.94);
 }
 
 /* Ensure labels are white */
